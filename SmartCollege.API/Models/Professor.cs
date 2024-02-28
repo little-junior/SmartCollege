@@ -6,7 +6,7 @@ namespace SmartCollege.API.Models
         {
         }
 
-        public Professor(int id, string nome, string sobrenome, DateOnly dataNascimento, string cpf, string email)
+        public Professor(int id, string nome, string sobrenome, DateTime dataNascimento, string cpf, string email)
         {
             Id = id;
             Nome = nome;
@@ -19,7 +19,7 @@ namespace SmartCollege.API.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateOnly DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string Cpf { get; set; }
         public string Email { get; set; }
         public IEnumerable<Disciplina> Disciplinas { get; set; }

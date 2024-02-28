@@ -9,7 +9,7 @@ namespace SmartCollege.API.Models
 
         }
 
-        public Disciplina(int id, int nome, string sala, int professorId, Periodos periodo)
+        public Disciplina(int id, string nome, string sala, int professorId, Periodos periodo)
         {
             Id = id;
             Nome = nome;
@@ -19,7 +19,7 @@ namespace SmartCollege.API.Models
         }
 
         public int Id { get; set; }
-        public int Nome { get; set; }
+        public string Nome { get; set; }
         public string Sala { get; set; }
         public int ProfessorId { get; set; }
         public Professor Professor { get; set; }

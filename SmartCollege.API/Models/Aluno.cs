@@ -7,7 +7,7 @@ namespace SmartCollege.API.Models
 
         }
 
-        public Aluno(int id, string nome, string sobrenome, DateTime dataNascimento, string cpf, string email, string telefone, int cursoId)
+        public Aluno(int id, string nome, string sobrenome, DateTime dataNascimento, string cpf, string email, string telefone, int semestre, int cursoId)
         {
             Id = id;
             Nome = nome;
@@ -16,6 +16,7 @@ namespace SmartCollege.API.Models
             Cpf = cpf;
             Email = email;
             Telefone = telefone;
+            Semestre = semestre;
             CursoId = cursoId;
         }
 
@@ -26,8 +27,9 @@ namespace SmartCollege.API.Models
         public string Cpf { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public int? CursoId { get; set; }
-        public Curso? Curso { get; set; }
-        public IEnumerable<AlunoDisciplina>? AlunosDisciplinas { get; set; }
+        public int CursoId { get; set; }
+        public Curso Curso { get; set; }
+        public int Semestre { get; set; }
+        public IEnumerable<AlunoDisciplina> AlunosDisciplinas { get; set; }
     }
 }

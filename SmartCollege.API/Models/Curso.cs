@@ -8,7 +8,7 @@ namespace SmartCollege.API.Models
         {
         }
 
-        public Curso(int id, int nome, Modalidades modalidade, Periodos? periodo)
+        public Curso(int id, string nome, Modalidades modalidade, Periodos periodo)
         {
             Id = id;
             Nome = nome;
@@ -17,9 +17,9 @@ namespace SmartCollege.API.Models
         }
 
         public int Id { get; set; }
-        public int Nome { get; set; }
+        public string Nome { get; set; }
         public Modalidades Modalidade { get; set; }
-        public Periodos? Periodo { get; set; }
+        public Periodos Periodo { get; set; }
         public IEnumerable<CursoDisciplina> CursosDisciplinas { get; set; }
         public IEnumerable<Aluno> Alunos { get; set; }
     }
